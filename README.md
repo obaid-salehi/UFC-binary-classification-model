@@ -4,11 +4,11 @@
 
 This project is a machine learning algorithm designed to predict binary fight outcomes (Win/Loss) in the UFC. The model uses time-series feature engineering, including a custom-built chronological Elo rating system and temporally-decayed performance statistics.
 
-The final model (Random Forest/XGBoost) achieves a **0.64 Weighted F1-Score**, demonstrating a significant 28% predictive uplift over the 0.50 random-chance baseline in a highly chaotic and stochastic sports environment.
+The final model (Random Forest/XGBoost) achieves a **0.64 Weighted F1-Score**, demonstrating a significant predictive uplift over the 0.50 random-chance baseline in a highly chaotic and stochastic sports environment.
 
 ---
 
-## 🚀 Project Pipeline & Methodology
+## Project Pipeline & Methodology
 
 This project's core challenge was engineering non-leaky, time-dependent features. This was accomplished by processing the entire fight history chronologically.
 
@@ -41,7 +41,7 @@ The `Result_1_Binary` target variable was heavily imbalanced (favoring wins). Th
 
 ---
 
-## 📈 Results
+## Results
 
 The model's performance was evaluated on the unseen 20% test set. The Random Forest Classifier achieved the most stable result.
 
@@ -52,7 +52,7 @@ Feature importance analysis confirmed that the custom-engineered features (`SSpm
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Python**
 * **Pandas:** Data cleaning, merging, and manipulation.
@@ -67,4 +67,4 @@ Feature importance analysis confirmed that the custom-engineered features (`SSpm
 * Increase the K-Factor for more experienced fighters and decrease for newer fighters so that earlier fights have less weighting.
 * Add age to the fighters table which is a considerably strong predictor and would potentially make fights involving older fighters more accurate.
 * Add opponent adjusted stats, e.g. `SSpm_1/2` is heavily dependent on what calibre of opponents the fighter is up against.
-* Split the data so that training and test data are not split between time (fighting game in the UFC evolves over time could be completely different across two sets).
+* Split the data so that training and test data are not split between time (fighting game in the UFC evolves over time could be completely different across two datasets).
